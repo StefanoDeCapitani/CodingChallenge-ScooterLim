@@ -1,0 +1,164 @@
+
+
+/* general properties and variables*/
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --small-text: 1.1rem;
+    --medium-text: 1.5rem;
+    --big-text: 2.8rem;
+
+    --headings-font: 'Roboto', sans-serif;
+    --text-font: 'Open Sans', sans-serif;
+
+    --clr-primary: #00dd00;
+    --clr-text: white;
+    
+    font-size: 10px;
+}
+
+
+/* layout */
+
+body{
+    height: 100vh;
+
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    width: 65vw;
+    border-radius: 1rem;
+    padding: 5%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+header{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+    padding: 1%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;    
+
+    background-color: var(--clr-primary);
+}
+
+.scooter-card{
+    width: 100%;
+    padding-top: 2rem;
+}
+
+
+/* typography */
+
+h1{
+    font-size: var(--big-text);
+    color: var(--clr-primary);
+}
+
+h1, .checkbox-label{
+    font-family: var(--headings-font);
+}
+
+.title{
+    text-align: center;
+    padding: 1rem;
+}
+
+.nav-button, .address, .charge-text{
+    font-size: var(--small-text);
+    font-family: var(--text-font);
+}
+
+.checkbox-label{
+    font-size: var(--medium-text);
+    padding-left: 0.2rem;
+}
+
+.checkbox-label, .address, .charge-text{
+    color: var(--clr-text);
+}
+
+
+/* single adjustments */
+
+.logo{
+    width: 30%;
+    min-width: 130px;
+}
+
+.charge-bar{
+    height: var(--big-text);
+    border-radius: 0.5rem;
+}
+
+#bar-a{
+    background: orange;
+    width: 50%;
+}
+
+#bar-b{
+    background: green;
+    width: 80%;
+}
+
+#bar-c{
+    background: red;
+    width: 40%;
+}
+
+
+/* fixing major responsiveness issues */
+
+@media screen and (max-width: 780px){
+    .title{
+        width: 17ch;
+    }
+}
+
+@media screen and (max-width: 500px){
+    nav{
+        flex-direction: column;
+        padding: 3%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .title{
+        font-size: 2rem;
+        width: 12ch;
+    }
+
+    .checkbox-label{
+        font-size: 1.4rem;
+    }
+    
+    .charge-bar{
+        height: 2rem;
+    }
+}
